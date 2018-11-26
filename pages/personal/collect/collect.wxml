@@ -1,0 +1,30 @@
+<import src="/pages/list/list-template/list-template.wxml"></import>
+<view class="searchConaiver">
+    <view wx:if="{{collectkong}}" class="collectkong">暂时没有收藏的房屋！</view>
+    <view bindtouchend="touchend" bindtouchstart="touchstart" data-id="{{starY}}">
+        <view wx:for="{{collectList}}">
+            <view class="listImgList">
+                <view catchtap="onListDetailTap" class="listBanner" data-id="{{item.id}}" >
+                  <image src="{{item.pics[0]}}"></image>
+                  <text class="listNumText"></text>
+                  <image catchtap="onListDetailTap" class="maskBg" data-id="{{item.id}}" src="/images/list/maskBg.png"></image>
+                </view>
+                <view catchtap="onListDetailTap" class="listBrand" data-id="{{item.id}}">
+                    <text class="listTitle">{{item.title}}</text>
+                    <view class="listAddress">{{item.room}}室{{item.hall}}厅{{item.guard}}卫 | {{item.area}}平方米
+            <view catchtap="onListDetailTap" class="listNumText" data-id="{{item.id}}">{{item.commission}}<text>元/月</text>
+                        </view>
+                    </view>
+                    <view class="listAddress">
+                        <image src="/images/list/addressIconGrey.png"></image>
+                        {{item.introduction}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- <view class="body-view" style="height:50rpx; background:#fff;">
+    <text hidden="{{hidden}}" style="color:#000; margin:15rpx 0; font-size:30rpx; display:{{hidden}}; text-align:center;">加载中...</text>
+    <text hidden="{{hidden1}}" style="color:#000; margin:15rpx 0; font-size:30rpx; display:{{hidden1}};  text-align:center;">别扯了，到底啦！</text>
+</view> -->

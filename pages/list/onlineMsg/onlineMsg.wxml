@@ -1,0 +1,75 @@
+<form>
+    <input hidden="true" id="house_id" name="house_id" type="hidden" value="{{house_id}}"></input>
+    <view class="onlineMsgContainer">
+        <view class="imgLeft">
+            <image src="/images/onlineMsg/onlinePerson.png" style="width:32rpx;height:34rpx;"></image>
+            <input id="real_name" name="real_name" placeholder="您的姓名" type="text" bindinput ="userName" value="{{userName}}"></input>
+        </view>
+        <view class="imgLeft">
+            <image src="/images/onlineMsg/onlineTel.png" style="width:24rpx;height:34rpx;"></image>
+            <input id="mobile" name="mobile" placeholder="您的手机号" type="text"  bindinput ="userPhone" value="{{userPhone}}" maxlength='11'></input>
+        </view>
+        <text class="onlineTitle">选择看房日期</text>
+        <input hidden="true" id="select_date" name="select_date" type="hidden" value="{{select_date}}"></input>
+        <view class="dataList">
+            <view class="flex box box-tb box-align-center">
+                <view class="calendar pink-color box box-tb">
+                    <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+                        <view bindtap="chooseYearAndMonth" class="date-area box box-lr box-align-center box-pack-center">{{cur_year||'--'}} - {{cur_month||'--'}} - {{cur_day||'--'}}</view>
+                        <view bindtap="handleCalendar" class="next box box-lr" data-handle="next">
+                            <view class="next-handle box box-lr box-align-center box-pack-center">
+                                <image src="/images/onlineMsg/onlineRight.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weeks box box-lr box-pack-center box-align-center">
+                        <view class="flex week fs28" data-idx="{{index}}" wx:for="{{weeks_ch}}" wx:key="{{index}}">{{item}}</view>
+                    </view>
+                    <view class="days box box-lr box-wrap">
+                        <view class="grid white-color box box-align-center box-pack-center" data-idx="{{index}}" wx:if="{{hasEmptyGrid}}" wx:for="{{empytGrids}}" wx:key="{{index}}"></view>
+                        <view class="grid white-color box box-align-center box-pack-center" data-idx="{{index}}" wx:for="{{days}}" wx:for-index="idx" wx:key="{{index}}">
+                            <view bindtap="tapDayItem" class="day {{item.gray?'greyColor':'blockColor'}} {{item.choosed?'border-radius pink-bg':''}} box box-align-center box-pack-center" id="{{idx+1}}">{{item.day}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="box box-tb" wx:if="{{showPicker}}">
+                <view class="picker-btns box box-lr box-pack-between box-align-center">
+                    <view bindtap="tapPickerBtn" class="picker-btn picker-cancel" data-type="cancel">取消</view>
+                    <view bindtap="tapPickerBtn" class="picker-btn picker-confirm" data-type="confirm">确定</view>
+                </view>
+                <picker-view bindchange="pickerChange" class="flex" indicatorStyle="height: 50px;" style="width: 100%; height: 150px;" value="{{picker_value}}">
+                    <picker-view-column>
+                        <view class="picker-view" style="line-height: 50px" wx:for="{{picker_year}}">{{item}}年</view>
+                    </picker-view-column>
+                    <picker-view-column>
+                        <view class="picker-view" style="line-height: 50px" wx:for="{{picker_month}}">{{item}}月</view>
+                    </picker-view-column>
+                </picker-view>
+            </view>
+        </view>
+        <!-- <view class="imgLeft">
+            <radio-group bindchange="radioChange" class="radio-group" name="time_type">
+                <label class="radio" wx:for="{{items}}">
+                    <radio checked="{{item.checked}}" value="{{item.value}}"></radio>
+                    {{item.name}}
+                </label>
+            </radio-group>
+        </view> -->
+        <view class="section">
+          <view class="section__title">请选择看房时间：</view>
+          <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange" class="starttime">
+            <view class="picker">
+              开始时间: {{time}}
+            </view>
+          </picker>
+          <picker mode="time" value="{{timeend}}" start="09:01" end="21:01" bindchange="bindTimeendChange" class="starttime" style="float:right">
+            <view class="picker">
+              结束时间: {{timeend}}
+            </view>
+          </picker>
+        </view>
+        
+        <button class="button-hover onlineMsgBtn" formType="submit" bindtap="bespokeSubmit">提 交</button>
+    </view>
+</form>

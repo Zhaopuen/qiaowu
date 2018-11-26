@@ -1,0 +1,45 @@
+{
+    "pages": [
+        "pages/list/list",
+        "pages/list/listDetail/listDetail",
+        "pages/personal/personal",
+        "pages/login/login/login",
+        "pages/personal/address/address",
+        "pages/personal/about/about",
+        "pages/personal/collect/collect",
+        "pages/personal/information/information",
+        "pages/list/search/search",
+        "pages/list/onlineMsg/onlineMsg",
+        "pages/list/newsList/newsList",
+        "pages/logins/logins",
+        "pages/list/newhouse/newhouse",
+        "pages/list/about/about"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "公寓家",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "borderStyle": "black",
+        "backgroundColor": "#fff",
+        "color": "#333",
+        "selectedColor": "#04b8b7",
+        "list": [
+            {
+                "pagePath": "pages/list/list",
+                "text": "租 房",
+                "iconPath": "images/list/zfIcon.png",
+                "selectedIconPath": "images/list/zfIconH.png"
+            },
+            {
+                "pagePath": "pages/personal/personal",
+                "text": "个人中心",
+                "iconPath": "images/list/personalIcon.png",
+                "selectedIconPath": "images/list/personalIconH.png"
+            }
+        ]
+    }
+}

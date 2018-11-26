@@ -1,0 +1,7 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="aboutConatiner">
+    <text class="aboutTitle">{{shequList}}</text>
+    <image src="{{shequPic}}" class="shequing"></image>
+    <!-- <text class="aboutNR">{{shequContent}}</text> -->
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" ></template>
+</view>

@@ -1,0 +1,99 @@
+.listImgList {
+    padding: 30rpx 0 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.listBanner {
+    position: relative;
+    width: 100%;
+}
+
+.listBanner image {
+    width: 100%;
+    height: 450rpx;
+    display: block;
+}
+
+.listBanner image.maskBg {
+    width: 100%;
+    height: 166rpx;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.listNumText {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: -22rpx;
+    padding: 15rpx 20rpx 13rpx;
+    color: #feb053;
+    font-size: 38rpx;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.listNumText text {
+    font-size: 26rpx;
+    color: #666;
+    display: inline-block;
+    margin-left: 5rpx;
+}
+
+.listBrand {
+    padding: 30rpx 28rpx;
+    margin: -49rpx 28rpx 0;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5rpx 30rpx rgba(0,0,0,0.2);
+    border-radius: 10rpx;
+}
+
+.listTitle {
+    color: #333;
+    font-size: 34rpx;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.listBrandText {
+    font-size: 22rpx;
+    color: #000;
+    float: right;
+    padding: 8rpx 15rpx;
+    border: 1px solid #000;
+}
+
+.listAddress {
+    position: relative;
+    color: #666;
+    font-size: 26rpx;
+    margin-top: 20rpx;
+}
+
+.listAddress image {
+    width: 22rpx;
+    height: 28rpx;
+    vertical-align: middle;
+    margin-right: 12rpx;
+    margin-top: -4rpx;
+}
+
+.statusText {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 30rpx;
+    padding: 15rpx 0;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    left: 0;
+    top: 200rpx;
+    z-index: 3;
+}

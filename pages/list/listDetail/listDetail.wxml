@@ -1,0 +1,149 @@
+<view class="listDetailConaiver">
+    <view class="bannerList">
+        <swiper autoplay="{{autoplay}}" bindchange="swiperChange" circular="true" class="swiperListDetailConaiver" current="index">
+            <swiper-item wx:for="{{listDetailImg}}" wx:for-index="idx">
+                <image bindtap="previewImage" data-id="{{idx}}" lazyLoad="true" mode="aspectFill" src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+        <text class="statusText" hidden="{{status==1?false:true}}" style="top:290rpx;">已租</text>
+        <!-- <text class="bannerNum">{{indexNum}} / {{totalNum}}</text> -->
+    </view>
+    <view class="cwp28">
+        <text class="listDetailTitle" hidden="{{listDetail?false:true}}">{{listDetail}}</text>
+        <view class="pageViews">
+            <text class="releaseTimes">{{update}}更新</text>
+        </view>
+        <view>
+            <view class="listDetailBrands  {{room_type==1 ? 'listDetailBg':'' }}" style="margin-right:20rpx;">
+                <text>合作房源</text>
+            </view>
+            <view class="listDetailBrands {{room_type==0 ? 'listDetailBg':'' }}">
+                <text>自营房源</text>
+            </view>
+        </view>
+        <view class="listDetailPrice listDetailPriceLine" wx:if="{{is_landlord==5}}">
+            <view class="priceLine" wx:for="{{listCommission}}">
+                <text class="priceNumMore">{{item.price}}<text style="color:#04B8B7">元/月</text>
+                </text>
+                <text class="priceRed" hidden="{{item.percentage==0?true:false}}">佣金{{item.percentage}}%</text>
+                <text class="priceGreen" hidden="{{item.personal_commission?false:true}}">个佣{{item.personal_commission}}</text>
+            </view>
+        </view>
+        <view class="listDetailPrice" wx:else>
+            <text class="priceNum">{{price}}<text>元/月</text>
+            </text>
+        </view>
+        <view class="louFour">
+            <view class="louFourSingle">
+                <view>
+                    <image src="/images/listDetail/lcIcon.png" style="width:27rpx;"></image>
+                    <text>{{allFloor}}/{{floor}}层</text>
+                </view>
+            </view>
+            <view class="louFourSingle">
+                <view>
+                    <image src="/images/listDetail/stIcon.png" style="width:40rpx;"></image>
+                    <text>{{room}}室{{hall}}厅{{guard}}卫</text>
+                </view>
+            </view>
+            <view class="louFourSingle">
+                <view>
+                    <image src="/images/listDetail/pmIcon.png" style="width:40rpx;"></image>
+                    <text>{{area}}平方米</text>
+                </view>
+            </view>
+            <view class="louFourSingle">
+                <view>
+                    <image src="/images/listDetail/dataIcon.png" style="width:40rpx;"></image>
+                    <text>{{rtId}}起租</text>
+                </view>
+            </view>
+        </view>
+        <view class="informationWord">
+            <image src="/images/listDetail/clockIcon.png"></image>
+            <text>最早可入住的时间：{{inDate}}</text>
+        </view>
+        <view class="informationWord">
+            <image src="/images/listDetail/addressIcon.png"></image>
+            <text>{{adress}}</text>
+        </view>
+        <view class="informationWord">
+            <image src="/images/listDetail/subwayIcon.png"></image>
+            <text>{{loadline}}</text>
+        </view>
+        <view class="blackLine"></view>
+        <text class="pieceTitle">看房贴士</text>
+        <view class="detailWord">
+            <text>{{tips}}</text>
+        </view>
+        <text class="pieceTitle">房屋特征</text>
+        <view class="detailhouse">
+            <text wx:for="{{housetedian}}">{{item.name}}</text>
+        </view>
+        <input hidden="true" id="postid" name="postid" type="hidden" value="{{postid}}"></input>
+        <view class="louFour" hidden="{{list[0].name?false:true}}">
+            <view class="louFourSingle" wx:for="{{list}}" wx:for-index="idx">
+                <view>
+                    <image src="{{list[idx].icon}}"></image>
+                    <text>{{list[idx].name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="cwp28" style="margin-bottom:90rpx;">
+        <view class="productList">
+            <text class="productListTitle">
+                <text>好屋推荐</text>
+            </text>
+            <view class="swiperImgList" wx:for="{{goodHouse}}" wx:for-index="idx">
+              <navigator url="listDetail?id={{item.id}}">
+                  <image mode="aspectFill" src="{{item.pics[0]}}"></image>
+                  <text class="swiperTitle">{{item.title}}</text>
+                  <view class="swiperPrice">{{item.commission}}
+        <text>元/月</text>
+                  </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="diList">
+        <view class="louFourwhite">
+            <view class="louFourwhiteDouble">
+                <button catchtap="onShareAppMessage" openType="share" plain="true">
+                    <image src="/images/listDetail/share.png" style="width:37rpx;"></image>
+                    <text class="onlineWord">分享</text>
+                </button>
+                <input hidden="false" id="shareId" name="shareId" value="{{postid}}"></input>
+            </view>
+            <view class="louFourwhiteDouble">
+                <view bindtap="collection">
+                    <image src="/images/listDetail/collectionIcon.png" style="width:44rpx;" wx:if="{{collectionIcon}}"></image>
+                    <image src="/images/listDetail/collectionIconH.png" style="width:44rpx;" wx:if="{{!collectionIcon}}"></image>
+                    <text class="onlineWord">收藏</text>
+                </view>
+            </view>
+            <!-- catchtap="onTelTap" -->
+            <view bindtap="makephone" class="louFourwhiteSingle">
+                <view class="blueBtn">
+                    <image src="/images/listDetail/telIcon.png" style="width:22rpx;"></image>
+                    <text class="onlineWord">电话预约</text>
+                </view>
+                <input hidden="false" id="brands" name="brands" value="{{contact_phone}}"></input>
+            </view>
+            <view  class="louFourwhiteSingle">
+                <view class="redBtn">
+                    <image src="/images/listDetail/onlineIcon.png" style="width:22rpx;"></image>
+                    <!-- <text class="onlineWord" wx:if="{{room_type==0}}" bindtap="pay">预付订单</text> -->
+                    <text class="onlineWord" wx:if="{{room_type==0}}" bindtap="onlineMsgTap"  data-id="{{houseid}}">在线预约</text>
+                     <text class="onlineWord" wx:if="{{room_type==1}}" catchtap="onlineMsgTap"  data-id="{{houseid}}">在线预约</text>
+
+                </view>
+                <input hidden="false" id="onlineMsg" name="onlineMsg" value="{{postid}}"></input>
+            </view>
+        </view>
+    </view>
+    <view class="backhome" bindtap="gotoHome">
+      <image src="../../../images/list/home.png"></image>
+      <text>首页</text>
+    </view>
+</view>

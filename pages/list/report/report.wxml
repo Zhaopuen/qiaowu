@@ -1,0 +1,16 @@
+<form bindsubmit="formSubmit">
+    <view class="reportConaiver">
+        <text class="reportTitle">举报该房源的理由</text>
+        <checkbox-group class="reportCheckbox" name="reason">
+            <checkbox value="2">房源不存在</checkbox>
+            <checkbox value="3">房源已出租</checkbox>
+            <checkbox value="4">租金虚假</checkbox>
+            <checkbox value="6">联系方式错误</checkbox>
+            <checkbox value="7">图片不真实</checkbox>
+            <checkbox value="8">其他</checkbox>
+        </checkbox-group>
+        <text class="reportTitle">详细描述</text>
+        <textarea class="reportTextarea" maxlength="40" name="msg"></textarea>
+        <button class="button-hover" formType="submit">提 交</button>
+    </view>
+</form>

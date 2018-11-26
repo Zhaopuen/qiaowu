@@ -1,0 +1,447 @@
+@import "../list-template/list-template.wxss";
+
+.bannerList {
+    position: relative;
+}
+
+.bannerNum {
+    position: absolute;
+    z-index: 11;
+    right: 28rpx;
+    bottom: 20rpx;
+    background: rgba(182,154,128,0.9);
+    padding: 10rpx 20rpx;
+    font-size: 26rpx;
+    color: #fff;
+    border-radius: 100rpx;
+}
+
+swiper.swiperListDetailConaiver {
+    width: 100%;
+    height: 570rpx;
+    position: relative;
+}
+
+.swiperListDetailConaiver image {
+    width: 100%;
+    height: 570rpx;
+}
+
+swiper.swiperListConaiver {
+    width: 100%;
+    height: 650rpx;
+}
+
+.swiperListConaiver image {
+    width: 100%;
+    height: 500rpx;
+}
+
+.listDetailConaiver {
+    display: flex;
+    flex-direction: column;
+    background: #f6f6f6;
+    position: relative;
+}
+
+.cwp28 {
+    background: #fff;
+    padding: 40rpx 28rpx 28rpx;
+    margin-bottom: 14rpx;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+}
+
+.pageViews {
+    color: #888;
+    font-size: 26rpx;
+    margin-top: 32rpx;
+    position: relative;
+}
+
+.pageViews image {
+    width: 28rpx;
+    height: 18rpx;
+    vertical-align: middle;
+    margin-right: 9rpx;
+}
+
+.listDetailBrands {
+    border: 1px solid #555;
+    padding: 7rpx 18rpx;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.listDetailBg{
+    background:#CFCFCF;
+    color:#fff !important;
+    border-color:#d9d9d9;
+}
+
+.listDetailBrands image.brandsImg {
+    width: 35rpx;
+    height: 35rpx;
+    margin: -2px 8rpx 0 0;
+    vertical-align: middle;
+}
+
+.listDetailBrands image.brandsImgRight {
+    width: 15rpx;
+    height: 28rpx;
+    margin: -2px 0 0 17rpx;
+    vertical-align: middle;
+}
+
+.listDetailBrands {
+    font-size: 30rpx;
+    color: #555;
+}
+
+.listDetailPrice {
+    margin: 40rpx 0 15rpx;
+    position: relative;
+}
+
+.priceNum {
+    color: #04B8B7;
+    font-size: 48rpx;
+    /* border-bottom: 4rpx solid #000; */
+    padding-bottom: 5rpx;
+}
+
+.priceNumMore {
+    color: #b69a80;
+    font-size: 48rpx;
+}
+
+.priceLine {
+    border-bottom: 1rpx solid #d8d8d8;
+    padding: 10rpx 0 15rpx;
+}
+
+.priceRed {
+    color: #f92131;
+    border: 1px solid #f92131;
+    border-radius: 100rpx;
+    font-size: 22rpx;
+    padding: 5rpx 10rpx;
+    margin-left: 25rpx;
+}
+
+.priceGreen {
+    color: #28b03c;
+    border: 1px solid #28b03c;
+    border-radius: 100rpx;
+    font-size: 22rpx;
+    padding: 5rpx 10rpx;
+    margin-left: 15rpx;
+}
+
+.listDetailPriceLine {
+    border-bottom: 4rpx solid #000;
+}
+
+.priceNum text,.priceNumMore text {
+    color: #04B8B7;
+    font-size: 26rpx;
+    margin-left: 25rpx;
+}
+
+.releaseTimes {
+    position: absolute;
+    color: #888;
+    font-size: 26rpx;
+    top: 0;
+    right: 0;
+}
+
+.creditWord {
+    margin-top: 29rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.creditWord {
+    color: #888;
+    font-size: 24rpx;
+}
+
+.creditWord text.mt17 {
+    margin-top: 17rpx;
+}
+
+.louFour {
+    margin: 20rpx 0 10rpx;
+    background: #f6f6f6;
+    padding: 25rpx 20rpx;
+}
+
+.louFour view.louFourSingle {
+    text-align: center;
+    width: 25%;
+    display: inline-block;
+    margin: 15rpx 0;
+}
+
+.louFourSingle view {
+    display: flex;
+    flex-direction: column;
+}
+
+.louFourSingle view image {
+    height: 40rpx;
+    width: 40rpx;
+    margin: 0 auto 15rpx;
+}
+
+.louFourSingle view text {
+    color: #888;
+    font-size: 24rpx;
+}
+
+.informationWord {
+    margin-top: 20rpx;
+}
+
+.informationWord image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+    vertical-align: middle;
+}
+
+.informationWord text {
+    color: #333;
+    font-size: 30rpx;
+}
+
+.blackLine {
+    border-bottom: 1px solid #d8d8d8;
+    padding-top: 20rpx;
+}
+
+.pieceTitle {
+    color: #000;
+    font-size: 30rpx;
+    margin: 40rpx 0 30rpx;
+}
+
+.detailWord {
+    position: relative;
+}
+
+.contentWord {
+    color: #888;
+    font-size: 26rpx;
+}
+
+.moreBtn {
+    color: #b69a80;
+    font-size: 26rpx;
+    margin-left: 20rpx;
+}
+
+.report {
+    margin-top: -15rpx;
+}
+
+.reportText01 {
+    color: #000;
+    font-size: 26rpx;
+}
+
+.reportText02 {
+    float: right;
+}
+
+.reportText02 text {
+    color: #f92131;
+    font-size: 26rpx;
+}
+
+.reportText02 image {
+    margin-left: 14rpx;
+    width: 15rpx;
+    height: 28rpx;
+    vertical-align: middle;
+}
+
+.productList {
+    text-align: center;
+}
+
+.productListTitle {
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 2px solid #000;
+    padding-bottom: 18rpx;
+}
+
+.productListTitle text {
+    color: #000;
+    font-size: 30rpx;
+    border-bottom: 1px solid #000;
+    padding-bottom: 15rpx;
+    line-height: 100rpx;
+}
+
+.mt35 {
+    margin-top: 35rpx;
+}
+
+.diList {
+    padding: 14rpx 28rpx;
+    background: #fff;
+    border-top: 1px solid #d8d8d8;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 694rpx;
+}
+
+.louFourwhite {
+    display: flex;
+    flex-direction: row;
+}
+
+.louFourwhiteSingle {
+    width: 260rpx;
+    margin-left: 14rpx;
+    text-align: center;
+}
+
+.louFourwhiteSingle view {
+    border-radius: 4px;
+    padding: 15rpx 0;
+}
+
+.redBtn {
+    background: #04B8B7;
+}
+
+.louFourwhiteSingle image {
+    height: 34rpx;
+    margin-right: 14rpx;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.onlineWord {
+    color: #fff;
+    font-size: 32rpx;
+}
+
+.blueBtn {
+    background: #000000;
+}
+
+.louFourwhiteDouble {
+    text-align: center;
+    margin-right: 35rpx;
+    width: 50rpx;
+}
+
+.louFourwhiteDouble view,.louFourwhiteDouble button {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: none;
+}
+
+.louFourwhiteDouble image {
+    margin: 0 auto 15rpx;
+}
+
+.louFourwhiteDouble text {
+    color: #888;
+    font-size: 22rpx;
+    display: block;
+    height: 30rpx;
+    line-height: 30rpx;
+}
+
+.louFourwhiteDouble image {
+    height: 38rpx;
+}
+
+.swiperImgList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+}
+.swiperImgList image{
+  width:100%;
+}
+
+.swiperTitle {
+    color: #000;
+    font-size: 30rpx;
+    margin: 15rpx 0;
+    text-align: left;
+}
+
+.swiperDetail {
+    color: #888;
+    font-size: 26rpx;
+    text-align: left;
+}
+
+.swiperPrice {
+    position: absolute;
+    left: 0;
+    top: 360rpx;
+    color: #fff;
+    font-size: 30rpx;
+    padding: 15rpx 20rpx 13rpx;
+    background: rgba(0,0,0,0.8);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.swiperPrice text {
+    font-size: 22rpx;
+    margin-left: 15rpx;
+}
+.detailWord text{
+  font-size:0.8rem;
+  line-height:60rpx;
+  color:#999;
+}
+.detailhouse text{
+  display:block;
+  border:1px solid #d9d9d9;
+  line-height:60rpx;
+  font-size:0.8rem;
+  color:#999;
+  padding:10rpx 15rpx;
+  float:left;
+  margin:10rpx 5rpx;
+  border-radius:4px;
+}
+.backhome{
+  width:110rpx;
+  height:110rpx;
+  background: #04B8B7;
+  border-radius: 50%;
+  position: fixed;
+  top:700rpx;
+  right:30rpx;
+  text-align: center;
+}
+.backhome image{
+  width:50rpx;
+  height:50rpx;
+  margin-top: 6rpx;
+}
+.backhome text{
+  display: block;
+  color:#fff;
+  font-size: 28rpx;
+  margin-top: -8rpx;
+}

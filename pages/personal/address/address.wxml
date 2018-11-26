@@ -1,0 +1,26 @@
+<import src="/pages/list/list-template/list-template.wxml"></import>
+<view class="searchConaiver">
+    <view wx:if="{{collectkong}}" class="collectkong">暂时没有收藏的房屋！</view>
+    <view bindtouchend="touchend" bindtouchstart="touchstart" data-id="{{starY}}">
+        <view wx:for="{{collectList}}">
+            <view class="listImgList">
+                <view catchtap="onListDetailTap" class="listBanner" data-id="{{item.house.id}}" >
+                  <image src="{{item.house.pics[0]}}"></image>
+                  <text class="listNumText"></text>
+                  <image catchtap="onListDetailTap" class="maskBg" data-id="{{item.house.id}}" src="/images/list/maskBg.png"></image>
+                </view>
+                <view catchtap="onListDetailTap" class="listBrand" data-id="{{item.house.id}}">
+                    <text class="listTitle">{{item.house.title}}</text>
+                    <view class="listAddress">{{item.house.room}}室{{item.housr.hall}}厅{{item.house.guard}}卫 | {{item.house.area}}平方米
+            <view catchtap="onListDetailTap" class="listNumText" data-id="{{item.house.id}}">{{item.house.commission}}<text>元/月</text>
+                        </view>
+                    </view>
+                    <view class="listAddress">
+                        <image src="/images/list/addressIconGrey.png"></image>
+                        {{item.house.introduction}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

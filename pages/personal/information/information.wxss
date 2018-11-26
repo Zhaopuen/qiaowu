@@ -1,0 +1,51 @@
+page {
+    background: #f6f6f6;
+}
+
+.informationBg {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.informationLsit {
+    border-top: 1px solid #d8d8d8;
+    margin: 0 28rpx;
+    padding: 30rpx 0;
+}
+
+.informationTextLeft {
+    color: #000;
+    font-size: 26rpx;
+}
+
+.informtionRight {
+    float: right;
+    text-align: right;
+}
+
+.informtionRight text {
+    color: #888;
+    font-size: 26rpx;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.informtionRight image {
+    width: 15rpx;
+    height: 28rpx;
+    vertical-align: middle;
+    margin-left: 15rpx;
+}
+
+.editBtnPd {
+    margin: 28rpx;
+}
+
+.editBtnPd button {
+    background: #000;
+    color: #fff;
+    width: 100%;
+}

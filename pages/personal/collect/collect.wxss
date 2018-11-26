@@ -1,0 +1,428 @@
+@import "../../list/list-template/list-template.wxss";
+
+.niceHouseTitle {
+    margin: 42rpx 0 0;
+}
+
+.niceHouseTitle text {
+    display: block;
+    text-align: center;
+    font-size: 42rpx;
+    margin: 0 28rpx;
+    color: #333;
+}
+
+.bannerListTop {
+    position: relative;
+}
+
+image.bannerListTopImg {
+    width: 100%;
+    height: 763rpx;
+    display: block;
+}
+
+.searchBgWhite {
+    margin: 0 28rpx;
+    padding: 35rpx 28rpx;
+    position: absolute;
+    left: 0;
+    bottom: 28rpx;
+    background: #fff;
+    border-radius: 10rpx;
+}
+
+.listImgBannerConaiver {
+    position: fixed;
+    left: 0;
+    height: 400rpx;
+    width: 100%;
+    z-index: 8;
+}
+
+.newsListPd {
+    margin: 28rpx 28rpx 14rpx;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.newsRight {
+    width: 356rpx;
+    margin-left: 14rpx;
+    text-align: right;
+}
+
+.newsListPd image {
+    display: block;
+}
+
+.newsListPd .newsRight image {
+    width: 356rpx;
+    height: 150rpx;
+}
+
+.newsRightLastPd {
+    margin-top: 14rpx;
+}
+
+.addressTopPd {
+    position: relative;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.addressTopPd .picker {
+    color: #333;
+    font-size: 30rpx;
+}
+
+.picker image {
+    width: 21rpx;
+    height: 14rpx;
+    vertical-align: middle;
+    margin-left: 10rpx;
+}
+
+.postPd {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ccc;
+    font-size: 24rpx;
+}
+
+.postPd image {
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+    margin: -5rpx 0 0 10rpx;
+}
+
+.searchList {
+    width: 100%;
+}
+
+.searchList input {
+    background: #fff;
+    color: #333;
+    font-size: 30rpx;
+    width: 618rpx;
+    height: 70rpx;
+    padding: 5rpx 10rpx;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 10rpx;
+}
+
+.searchList input:placeholder {
+    color: #ccc;
+}
+
+.searchBtn {
+    background: #20b7b6;
+    padding: 5rpx 10rpx;
+    height: 70rpx;
+    line-height: 65rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+.searchBtn text {
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.searchIcon {
+    vertical-align: middle;
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 6rpx;
+}
+
+.listConaiver {
+    display: flex;
+    flex-direction: column;
+    width: 750rpx;
+}
+
+.addressConaiver {
+    display: flex;
+    flex-direction: row;
+    padding: 23rpx 28rpx 24rpx;
+    background: #f6f6f6;
+}
+
+.addressConaiver image {
+    width: 26rpx;
+    height: 32rpx;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+
+.addressTextYellow {
+    color: #b69b7d;
+    font-size: 30rpx;
+    margin-left: 15rpx;
+}
+
+.addressTextBlack {
+    color: #333;
+    font-size: 30rpx;
+    margin-left: 15rpx;
+}
+
+.listImgBanner {
+    width: 100%;
+    height: 400rpx;
+}
+
+.houseListContainer {
+    height: 890rpx;
+}
+
+.factorList {
+    padding: 0 28rpx;
+    margin: 20rpx 0;
+}
+
+.factorList view {
+    width: 24%;
+    text-align: center;
+    display: inline-block;
+}
+
+.factorList view.borderRight {
+    border-right: 1px solid #d8d8d8;
+}
+
+.factorList view text {
+    font-size: 26rpx;
+    color: #888;
+}
+
+.factorList view image {
+    width: 28rpx;
+    height: 14rpx;
+    margin-left: 10rpx;
+    vertical-align: middle;
+}
+
+.setsNum {
+    padding: 20rpx 28rpx;
+    background: #f6f6f6;
+}
+
+.setsNumColor {
+    color: #000;
+    font-size: 30rpx;
+    width: 50%;
+    display: inline-block;
+}
+
+.setsNumColor text {
+    margin-left: 15rpx;
+    color: #b69a80;
+}
+
+.factorListLa {
+    padding: 20rpx 28rpx;
+    border-top: 1px solid #d8d8d8;
+    background: #fff;
+    position: absolute;
+    top: 200rpx;
+    width: 694rpx;
+    z-index: 10;
+}
+
+.factorListLa text {
+    padding: 15rpx 0;
+    border-bottom: 1px solid #d8d8d8;
+    display: block;
+    font-size: 30rpx;
+    color: #888;
+}
+
+.selectList {
+    border-top: 1px solid #d8d8d8;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #fff;
+}
+
+.product-list {
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.choice-bar {
+    display: flex;
+    width: 100vw;
+    font-size: 16px;
+    background-color: #fff;
+    z-index: 9;
+}
+
+.chioce-item {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28rpx;
+    width: 33.33%;
+    margin: 20rpx 0;
+    font-size: 26rpx;
+    color: #888;
+    height: 80rpx;
+    border-left: 1rpx solid #ddd;
+    z-index: 10;
+}
+
+.chioce-item-last {
+    border-right: none;
+}
+
+.chioce-item-first {
+    border-left: none;
+}
+
+.icon-chioce {
+    width: 28rpx;
+    height: 14rpx;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.district-list,.sorting-list,.filter-list {
+    margin-top: 2rpx;
+    position: absolute;
+    top: 98rpx;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 8;
+    font-size: 14px;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.chioce-list-show {
+    border-top: 1px solid #d8d8d8;
+    top: 98rpx;
+    animation: slide 500ms;
+}
+
+@-webkit-keyframes slide {
+    0% {
+        top: 0rpx;
+    }
+
+    100% {
+        top: 101rpx;
+    }
+}
+
+@keyframes slide {
+    0% {
+        top: 0rpx;
+    }
+
+    100% {
+        top: 101rpx;
+    }
+}
+
+.chioce-list-hide {
+    display: none!important;
+}
+
+.district-list {
+    display: flex;
+}
+
+.district-left {
+    flex-grow: 1;
+}
+
+.district-right {
+    flex-grow: 4;
+}
+
+.scroll-district {
+    height: 500rpx;
+}
+
+.district-parent {
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 40rpx;
+    border-bottom: 1rpx solid #ddd;
+    border-right: 1rpx solid #ddd;
+    background-color: #f0f0f0;
+}
+
+.district-parent-active {
+    background-color: #fff;
+}
+
+.district-children {
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 40rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.sorting-item {
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 40rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.filter-item {
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 40rpx;
+    border-bottom: 1rpx solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-selected {
+    width: 28rpx;
+    height: 14rpx;
+}
+
+.filter-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-footer button {
+    margin: 20rpx 80rpx;
+    border-radius: 0!important;
+}
+
+.button-reset {
+    border: 1rpx solid #ddd!important;
+    color: #666!important;
+}
+.collectkong{
+  font-size:0.8rem;
+  text-align: center;
+  color:#888;
+  line-height:120rpx;
+}

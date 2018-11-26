@@ -1,0 +1,61 @@
+<import src="/pages/list/list-template/list-template.wxml"></import>
+<view class="searchConaiver">
+    <view class="listImgBannerConaiver" style="display:none;">
+        <image class="listImgBanner" src="http://gongyujia.fengsh.cn/static/index/bannerImg.jpg"></image>
+    </view>
+    <view class="bannerListTop">
+        <image class="bannerListTopImg" src="http://gongyujia.fengsh.cn/static/index/bannerImg.jpg"></image>
+        <view class="searchBgWhite">
+            <view class="addressTopPd">
+                <picker bindchange="bindPickerChange" range="{{region}}" value="{{ index }}">
+                  <view class="picker">
+                    {{ region[index] }}
+                    <image src="/images/list/icon-go-blackS.png"></image>
+                  </view>
+                </picker>
+            </view>
+            <view class="searchList">
+                <input bindinput="keywordsInputEvent" id="keywords" name="keywords" placeholder="你想住在哪？(请输入关键字/位置)" placeholderStyle="color:#ccc;" value="{{keywords}}"></input>
+                <view bindtap="findNewHouse" class="searchBtn">
+                    <text>发现您的好屋</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="newsListPd">
+        <image data-adnum="1" bindtap="newsTwoListTap" data-url="{{picTwoUrl}}" src="{{picTwo}}" style="width:326rpx; height:314rpx;"></image>
+        <view class="newsRight">
+            <image bindtap="newsListTap" data-adnum="2" data-url="{{picNewUrl}}" src="{{picNew}}"></image>
+            <image bindtap="shequListTap" class="newsRightLastPd" data-adnum="3" data-url="{{picshequUrl}}" src="{{picshequ}}" style="position: absolute; bottom:0;"></image>
+        </view> 
+    </view>
+    <view class="niceHouseTitle">
+        <text>好屋推荐</text>
+    </view>
+    <view bindtouchend="touchend" bindtouchstart="touchstart" >
+        <view wx:for="{{swiperTab}}">
+            <view class="listImgList">
+                <view catchtap="onListDetailTap" class="listBanner" data-id="{{item.id}}" >
+                  <image src="{{item.pics[0]}}"></image>
+                  <text class="listNumText"></text>
+                  <image catchtap="onListDetailTap" class="maskBg" data-id="{{item.id}}" src="/images/list/maskBg.png"></image>
+                </view>
+                <view catchtap="onListDetailTap" class="listBrand" data-id="{{item.id}}">
+                    <text class="listTitle">{{item.title}}</text>
+                    <view class="listAddress">{{item.room}}室{{item.hall}}厅{{item.guard}}卫 | {{item.area}}平方米
+            <view catchtap="onListDetailTap" class="listNumText" data-id="{{item.id}}">{{item.commission}}<text>元/月</text>
+                        </view>
+                    </view>
+                    <view class="listAddress">
+                        <image src="/images/list/addressIconGrey.png"></image>
+                        {{item.introduction}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="body-view" style="height:50rpx; background:#fff;">
+    <text hidden="{{hidden}}" style="color:#000; margin:15rpx 0; font-size:30rpx; text-align:center;">加载中...</text>
+    <text hidden="{{hidden1}}" style="color:#000; margin:15rpx 0; font-size:30rpx; text-align:center;">别扯了，到底啦！</text>
+</view>

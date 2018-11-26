@@ -1,0 +1,19 @@
+<template name="listTemplate">
+    <view class="listImgList">
+        <view class="listBanner">
+            <image catchtap="onListDetailTap" id="{{id}}" src="{{pic_url}}"></image>
+            <text catchtap="onListDetailTap" class="listNumText" id="{{id}}"></text>
+            <text catchtap="onListDetailTap" class="statusText" hidden="{{status==1?false:true}}" id="{{id}}">已租</text>
+            <image catchtap="onListDetailTap" class="maskBg" id="{{id}}" src="/images/list/maskBg.png"></image>
+        </view>
+        <view catchtap="onListDetailTap" class="listBrand" id="{{id}}">
+            <text catchtap="onListDetailTap" class="listTitle" id="{{id}}">{{house_name}}</text>
+            <view catchtap="onListDetailTap" class="listAddress" id="{{id}}">{{layout_type}} | {{building_area}}平米
+        <view catchtap="onListDetailTap" class="listNumText" id="{{id}}">{{price}}<text catchtap="onListDetailTap" id="{{id}}">元/月</text>
+                </view>
+            </view>
+            <view catchtap="onListDetailTap" class="listAddress" id="{{id}}">
+                <image catchtap="onListDetailTap" id="{{id}}" src="/images/list/addressIconGrey.png"></image>{{address}}</view>
+        </view>
+    </view>
+</template>

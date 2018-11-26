@@ -1,0 +1,40 @@
+<view class="personalConatiner">
+    <view class="personalBg">
+        <view class="headBg">
+            <image class="headBgImg" src="http://gongyujia.fengsh.cn/static/index/headBgImg.jpg"></image>
+            <view class="headBgPd">
+                <!-- <image catchtap="onPersonalBtn" class="headLogo" src="{{avatar}}" wx:if="{{avatar}}"></image>
+                <image catchtap="onPersonalBtn" class="headLogo" src="/images/personal/logo.png" wx:else></image>
+                <text catchtap="onLoginBtn" class="dz" wx:if="{{!nick_name}}">点击注册/登录</text>
+                <view catchtap="onPersonalBtn" class="names" wx:else>
+                    <text>{{nick_name}}</text>
+                    <image catchtap="onPersonalBtn" src="/images/personal/right.png"></image>
+                </view> -->
+                <view class="names">
+                  <image class="content-top-img" src="{{userInfo.avatar}}"></image>
+                  <view class="content-top-name">{{userInfo.nickname}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="personalListPd">
+        <view catchtap="onCollectBtn" class="personalList">
+            <image class="personalIcon" src="/images/personal/collectIcon.png"></image>
+            <text>我的收藏</text>
+            <image class="personalRight" src="/images/listDetail/right.png"></image>
+        </view>
+        <view catchtap="onSuggestBtn" class="personalList">
+            <image class="personalIcon" src="/images/personal/suggestIcon.png"></image>
+            <text>我的预约</text>
+            <image class="personalRight" src="/images/listDetail/right.png"></image>
+        </view>
+        <view catchtap="onAboutBtn" class="personalList">
+            <image class="personalIcon" src="/images/personal/aboutIcon.png"></image>
+            <text>关于俏屋</text>
+            <image class="personalRight" src="/images/listDetail/right.png"></image>
+        </view>
+    </view>
+    <!-- <view bindtap="activeH5" class="activeBannerPd" hidden="{{!pic_url?true:false}}">
+        <image src="{{pic_url}}"></image>
+    </view> -->
+</view>

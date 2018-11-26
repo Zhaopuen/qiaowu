@@ -1,0 +1,84 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}
+
+page {
+    border-top: 1px solid #f6f6f6;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.borderTopNone {
+    border-top: none!important;
+}
+
+text.statusGreen {
+    color: #3fc75a;
+    border: 1px solid #3fc75a;
+}
+
+text.statusGrey {
+    color: #888;
+    border: 1px solid #888;
+}
+
+.sumRightGrey {
+    color: #888;
+}
+
+.sumRightRed {
+    color: #f92131!important;
+    margin: 0 3rpx 0 15rpx;
+}
+
+.red {
+    color: #f92131!important;
+}
+
+.sumNum {
+    color: #f92131;
+    font-size: 70rpx;
+    margin-right: 14rpx;
+}
+
+@-webkit-keyframes redPulse {
+    from {
+        background-color: #bc330d;
+        -webkit-box-shadow: 0 0 9px #bc330d;
+    }
+
+    50% {
+        background-color: #e33100;
+        -webkit-box-shadow: 0 0 18px #e33100;
+    }
+
+    to {
+        background-color: #bc330d;
+        -webkit-box-shadow: 0 0 9px #bc330d;
+    }
+}
+
+@keyframes redPulse {
+    from {
+        background-color: #bc330d;
+        -webkit-box-shadow: 0 0 9px #bc330d;
+    }
+
+    50% {
+        background-color: #e33100;
+        -webkit-box-shadow: 0 0 18px #e33100;
+    }
+
+    to {
+        background-color: #bc330d;
+        -webkit-box-shadow: 0 0 9px #bc330d;
+    }
+}

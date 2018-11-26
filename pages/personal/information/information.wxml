@@ -1,0 +1,24 @@
+<view class="informationBg">
+    <view class="informationLsit">
+        <text class="informationTextLeft">昵称</text>
+        <view class="informtionRight">
+            <text>{{nick_name}}</text>
+        </view>
+    </view>
+    <view class="informationLsit">
+        <text class="informationTextLeft">手机号</text>
+        <view class="informtionRight">
+            <text>{{mobile}}</text>
+        </view>
+    </view>
+    <view class="informationLsit">
+        <text class="informationTextLeft">密码</text>
+        <view catchtap="onPasswordBtn" class="informtionRight">
+            <text style="font-size:60rpx!important;margin-top:-30rpx;">......</text>
+            <image src="/images/listDetail/right.png"></image>
+        </view>
+    </view>
+</view>
+<view catchtap="logout" class="editBtnPd">
+    <button>退出当前账户</button>
+</view>

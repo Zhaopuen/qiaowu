@@ -1,0 +1,36 @@
+page {
+    background: #f6f6f6;
+}
+
+.aboutConatiner {
+    margin: 60rpx 28rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutImg {
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 65rpx;
+}
+
+.aboutImg image {
+    width: 155rpx;
+    height: 203rpx;
+    margin: 0 auto 80rpx;
+}
+
+.aboutTitle {
+    color: #000;
+    font-size: 30rpx;
+    margin-bottom: 43rpx;
+    text-align: center;
+}
+
+.aboutNR {
+    color: #888;
+    font-size: 26rpx;
+    text-indent: 2em;
+    text-align: left;
+    line-height: 48rpx;
+}
