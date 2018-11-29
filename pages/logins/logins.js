@@ -21,7 +21,7 @@ Page({
         console.log(o, 'wx.login')
         var n = o.code;
         wx.request({
-          url: 'https://gongyujia.fengsh.cn/api/user/wechatLoginMiniProgram',
+          url: 'https://www.qiaowugongyu.com/api/user/wechatLoginMiniProgram',
           method: "POST",
           data: {
             code: n,

@@ -7,7 +7,7 @@ module.exports = function Trequest(a) {
   //   sign && (a.data.sign = sign);
   // }
   wx.request({
-    url: 'https://gongyujia.fengsh.cn/api/' + a.url,
+    url: 'https://www.qiaowugongyu.com/api/' + a.url,
     header: a.header || {
       "content-type": "applisation/x-www-form-urlencoded"
     },
